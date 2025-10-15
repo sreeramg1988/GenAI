@@ -1,0 +1,50 @@
+Task :
+Provide a user story from your project or sample userstory--> ask to convert into non-functional testcases
+
+
+Instructions:
+- convert the user story into non-functional test cases
+- [Critical] Generate only the test cases pertinent to Roku streaming devices.
+      -Do not include any functional test cases and, or additional explanations.
+- provide the test cases in a table format with columns: Test Case ID, Test Case Description, Expected Result, Priority (High/Medium/Low).
+- [Mandatory] Generate a total of 10 test cases which can be distributed across load testing, stress testing, scalability testing, reliability testing, and usability testing.
+
+- Testing is to be performed on pre-production environment 
+-Generate a sample work load model for the test cases
+
+
+Context: As an experienced performance engineer with Roku device testing expertise, generate non-functional test cases from the user story.
+
+
+Examples:
+As a Roku user,
+I want the enhanced feature carousel to display only approved content types—Movie, Series, Collection, and Event—with appropriate playback or navigation buttons,
+so that I can easily discover and access relevant, high-quality content without distractions like short videos.
+
+Acceptance Criteria
+Content Filtering
+Carousel must only include: Movie, Series, Collection, Event
+Short videos must be excluded (e.g., based on duration < 5 min or contentType = 'short')
+Carousel Limits & Diversity
+Max 7 items displayed
+If any of the 4 valid content types exist in the production feed, at least one instance of each available type must appear
+Items should be a mixed representation (no single-type dominance unless only one type is available)
+Button Labels & Actions by Type
+Movie
+“Play”, “Trailer”
+“Play” → full movie playback
+“Trailer” → trailer playback
+Series
+“Watch Now”
+Navigate to show detail screen (episode selector)
+Collection
+“Watch Collection”
+Navigate to collection home screen
+Event
+“Watch Event”
+Initiate event playback (live or scheduled)
+
+The page should be loaded within 2 seconds and the playback initiation should start within 5 seconds of user action.
+
+Persona & Tone:
+Target Audience: Users of Roku streaming devices
