@@ -1,0 +1,62 @@
+URI: https://api.groq.com/openai/v1/chat/completions
+
+Request Body: 
+
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Convert the image content to text. \n Read all visible text without explanations. "
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "https://shifu.hotstarext.com/SOURCE/VOD/cd-2025-08-29/PKLEveryday_Web-025dd6fe-6750-407c-a170-826fd089bed0.jpg"
+          }
+        }
+      ]
+    }
+  ],
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "temperature": 0.1,
+  "max_completion_tokens": 100
+}
+
+
+Response:
+
+{
+    "id": "chatcmpl-a4ea4cc2-8abe-4bb9-aa23-65e40032baba",
+    "object": "chat.completion",
+    "created": 1760631094,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "The image is a promotional poster for the Pro Kabaddi League, featuring six men in sports jerseys and the league's logo.\n\n* **Title and Logo**\n\t+ The title \"PRO KABADDI LEAGUE\" is written in yellow and green text.\n\t+ The logo features a stylized letter \"P\" with a circle around it.\n* **Six Men**\n\t+ The men are standing in a line, facing the camera.\n\t+ They are all wearing sports jersey"
+            },
+            "logprobs": null,
+            "finish_reason": "length"
+        }
+    ],
+    "usage": {
+        "queue_time": 0.275214306,
+        "prompt_tokens": 2339,
+        "prompt_time": 0.069377029,
+        "completion_tokens": 100,
+        "completion_time": 0.233799119,
+        "total_tokens": 2439,
+        "total_time": 0.303176148
+    },
+    "usage_breakdown": null,
+    "system_fingerprint": "fp_79da0e0073",
+    "x_groq": {
+        "id": "req_01k7pwmy90fzzajjsc7cqyz3dq"
+    },
+    "service_tier": "on_demand"
+}
