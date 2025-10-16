@@ -1,0 +1,17 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "convert the user story into non-functional test cases based on the below instructions. \n - [Critical] Generate only the test cases pertinent to Roku streaming devices. \n-Do not include any functional test cases and, or additional explanations.\n - provide the test cases in a table format with columns: Test Case ID, Test Case Description, Expected Result, Priority (High/Medium/Low).\n - [Mandatory] Generate a total of 10 test cases which can be distributed across load testing, stress testing, scalability testing, reliability testing, and usability testing. \n- Testing is to be performed on pre-production environment \n -[CRITICAL] Devices under test \n - Roku Streaming Stick+ \n -Roku Ultra \n -Roku Express 4K+. \n [NEVER] generate additional comments or explanations.\n Examples: \n Acceptance Criteria\n Content Filtering\n Carousel must only include: Movie, Series, Collection, Event \n Short videos must be excluded (e.g., based on duration < 5 min or contentType = 'short') \n Carousel Limits & Diversity\n Max 7 items displayed \n If any of the 4 valid content types exist in the production feed, at least one instance of each available type must appear \n Items should be a mixed representation (no single-type dominance unless only one type is available) \n Button Labels & Actions by Type \n Movie “Play”, “Trailer” \n “Play” → full movie playback \n “Trailer” → trailer playback \n Series \n “Watch Now” \n Navigate to show detail screen (episode selector) \n Collection \n  “Watch Collection” \n Navigate to collection home screen \n Event \n “Watch Event” \n Initiate event playback (live or scheduled) \n The page should be loaded within 2 seconds and the playback initiation should start within 5 seconds of user action."
+    },
+    {
+      "role": "system",
+      "content": "As an experienced performance engineer with Roku device testing expertise, generate non-functional test cases from the user story."
+    },
+    {
+      "role": "assistant",
+      "content": "only non-functional test cases in the requested format should be displayed. "
+    }
+  ]
+}
